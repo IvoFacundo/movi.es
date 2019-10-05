@@ -111,7 +111,7 @@ figure {
     font-weight: 300;
     padding-bottom: 10px;
     border-bottom: 1px solid #f34949;
-    width: 100%;
+    width: 26%;
 }
 
 .movie-section {
@@ -223,6 +223,12 @@ figure {
 
     .movie-section {
         margin: 13px 15px;
+    }
+
+    .premiere h1,
+    .acclaimed h1,
+    .best h1 {
+        width: 100%;
     }
 
     .movie-list {
