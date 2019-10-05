@@ -111,7 +111,7 @@ figure {
     font-weight: 300;
     padding-bottom: 10px;
     border-bottom: 1px solid #f34949;
-    width: 26%;
+    width: 100%;
 }
 
 .movie-section {
@@ -221,12 +221,6 @@ figure {
         margin-bottom: 70px;
     }
 
-    .premiere h1,
-    .acclaimed h1,
-    .best h1 {
-        width: 35%;
-    }
-
     .movie-section {
         margin: 13px 15px;
     }
@@ -234,14 +228,15 @@ figure {
     .movie-list {
         grid-template-columns: 250px;
         grid-auto-columns: 250px;
-        grid-template-rows: 125px;
+        grid-template-rows: minmax(125px, 125px);
     }
     .movie-image {
         height: 125px;
     }
 
-    .movie-details:hover {
-        height: 10px;
+    .movie:hover .movie-details {
+        height: 110px;
+        min-height: 110px;
     }
     .movie-description {
         display: none;
