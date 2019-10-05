@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
+    background: white;
+}
+
+figure {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+        'vertical-nav header'
+        'vertical-nav content';
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 0px 5px;
+    width: 100%;
+    background: #141414;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.logo img {
+    width: 120px;
+    max-height: 70px;
+    vertical-align: middle;
+}
+
+.search .form input {
+    color: white;
+    width: 350px;
+    border: 2px solid #0e0e0e;
+    height: 30px;
+    padding: 5px 10px;
+    outline: none;
+    background: #2b2b2b;
+}
+
+.search .form input::placeholder {
+    color: #ccc;
+}
+
+.user-menu {
+    display: grid;
+    grid-template-columns: 1fr 40px 10px;
+    gap: 0px 10px;
+    align-items: center;
+}
+
+.user-menu img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.vertical-nav {
+    grid-area: vertical-nav;
+    display: grid;
+    grid-template-rows: 1fr 100px;
+    background: #f34949;
+    position: fixed;
+    height: 100%;
+    width: 100px;
+}
+
+.menu {
+    color: white;
+}
+
+.item-menu {
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+.item-menu p i {
+    font-size: 30px;
+}
+
+.menu .item-menu {
+    margin-bottom: 30px;
+}
+.item-menu p:nth-of-type(2) {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #141414;
+}
+
+.premiere h1,
+.acclaimed h1,
+.best h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f34949;
+    width: 26%;
+}
+
+.movie-section {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    overflow: hidden;
+    margin: 25px;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: 320px;
+    grid-auto-columns: 320px;
+    grid-auto-flow: column;
+    gap: 5px;
+    overflow: auto;
+}
+
+.movie {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.movie-image {
+    width: 100%;
+    height: 200px;
+}
+.movie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-details {
+    font-family: 'Karla', sans-serif;
+    position: absolute;
+    background: #1414148f;
+    bottom: 0;
+    color: white;
+    padding: 10px;
+    height: 90px;
+}
+
+.movie-details .movie-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.movie-details .movie-description {
+    font-size: 13px;
+}
