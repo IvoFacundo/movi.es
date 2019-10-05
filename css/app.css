@@ -13,8 +13,8 @@ figure {
     grid-template-columns: 100px 1fr;
     grid-template-rows: 70px 1fr;
     grid-template-areas:
-        'vertical-nav header'
-        'vertical-nav content';
+        'nav header'
+        'nav content';
     height: 100vh;
 }
 
@@ -64,8 +64,8 @@ figure {
     width: 100%;
 }
 
-.vertical-nav {
-    grid-area: vertical-nav;
+.nav {
+    grid-area: nav;
     display: grid;
     grid-template-rows: 1fr 100px;
     background: #f34949;
@@ -157,6 +157,7 @@ figure {
     color: white;
     padding: 10px;
     height: 90px;
+    width: 100%;
 }
 
 .movie:hover .movie-details {
@@ -170,4 +171,79 @@ figure {
 
 .movie-details .movie-description {
     font-size: 13px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 800px 70px;
+        grid-template-areas:
+            'header'
+            'content'
+            'nav';
+    }
+
+    .user-menu {
+        grid-template-columns: 40px 10px;
+    }
+
+    .user-menu p {
+        display: none;
+    }
+
+    .nav {
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        z-index: 1;
+        grid-template-columns: 1fr 100px;
+    }
+
+    .menu {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: 70px;
+        justify-content: start;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .menu .item-menu {
+        margin: 0;
+    }
+
+    .item-menu p:nth-of-type(2) {
+        display: none;
+    }
+
+    .content {
+        margin-bottom: 70px;
+    }
+
+    .premiere h1,
+    .acclaimed h1,
+    .best h1 {
+        width: 35%;
+    }
+
+    .movie-section {
+        margin: 13px 15px;
+    }
+
+    .movie-list {
+        grid-template-columns: 250px;
+        grid-auto-columns: 250px;
+        grid-template-rows: 125px;
+    }
+    .movie-image {
+        height: 125px;
+    }
+
+    .movie-details:hover {
+        height: 10px;
+    }
+    .movie-description {
+        display: none;
+    }
 }
